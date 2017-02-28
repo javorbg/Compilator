@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:Compilator"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
         
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_New"/>
+                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Save"/>
+                <MenuItem Header="Save _as"/>
+                <MenuItem Header="E_xit"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1">
+            <Button Content="Build"/>
+            <Button Content="Font"/>
+            <Button />
+            <Button Content="View Tables"/>
+            <Button Content="Debug"/>
+
+        </ToolBar>
+        <RichTextBox Grid.Row="2"/>
     </Grid>
 </Window>

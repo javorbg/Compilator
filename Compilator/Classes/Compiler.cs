@@ -172,19 +172,19 @@ namespace Compilator
 
                             if (2 == FindSymbol(input, i))
                             {
-                                addToLs(ref buffer);
+                                AddToList(buffer);
                                 buffer.Append(input[i]);
                                 buffer.Append(input[i + 1]);
-                                addToLs(ref buffer);
+                                AddToList(buffer);
                                 i += 2;
                             }
                             else
                             {
                                 if (1 == FindSymbol(input, i))
                                 {
-                                    addToLs(ref buffer);
+                                    AddToList(buffer);
                                     buffer.Append(input[i]);
-                                    addToLs(ref buffer);
+                                    AddToList(buffer);
                                     i++;
                                 }
                                 else
@@ -205,11 +205,11 @@ namespace Compilator
                         lexicalAnalyze.Clear();
                         return n;
                     }
-                    addToLs(ref buffer);
+                    AddToList(buffer);
                     i++;
                 }
             }
-            addToLs(ref buffer);
+            AddToList(buffer);
             ListStringToIndexSymbol();
             SetCodesInSymbolTable();
             SetValueAndAddress();
@@ -303,7 +303,7 @@ namespace Compilator
                 IndexInSymbolTable.Add(symbolCode);
             }
         }
-       
+
         private void AddToList(StringBuilder str)
         {
             if (buffer.Length != 0)
