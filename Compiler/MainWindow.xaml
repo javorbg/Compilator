@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
-        <local:MainWindowViewModel/>
+        <local:MainWindowViewModel />
     </Window.DataContext>
     <Window.Resources>
         
     </Window.Resources>
 
-    <Grid>
+    <Grid > 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition  Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0">
+        <Menu Grid.Row="0" >
             <MenuItem Header="_File" >
                 <MenuItem Header="_New"/>
                 <MenuItem Header="_Open"/>
@@ -36,8 +36,7 @@
             <Button Content="Debug"/>
 
         </ToolBar>
-        <RichTextBox x:Name="SourceCodeRTB" Grid.Row="2" >
-            <FlowDocument LineHeight="1" LineStackingStrategy="BlockLineHeight"/>
+        <RichTextBox x:Name="SourceCodeRTB" Grid.Row="2" local:RichTextBoxHelper.DocumentXaml="{Binding SourceCode}">
         </RichTextBox>
     </Grid>
 </Window>

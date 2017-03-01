@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace Compiler
 {
@@ -22,9 +24,12 @@ namespace Compiler
             SaveFileCommand = new DelegateCommand(OnSaveFileCommand);
             SaveAsFileCommand = new DelegateCommand(OnSaveAsFileCommand);
             ExiteCommand = new DelegateCommand(OnExiteCommand);
+            SourceCode = new FlowDocument();
+            SourceCode.LineHeight = 1d;
+
         }
 
-        public string SourceCodeText { get; set; }
+        public FlowDocument SourceCode { get; set; }
 
         public DelegateCommand NewFileCommand { get; set; }
 
@@ -67,7 +72,7 @@ namespace Compiler
 
         private void OnExiteCommand()
         {
-            Application.Current.Shutdown();   
+            Application.Current.Shutdown();
         }
 
         private void OnSaveAsFileCommand()
@@ -76,11 +81,13 @@ namespace Compiler
 
         private void OnSaveFileCommand()
         {
-            
+
         }
 
         private void OnNewFileCommand()
         {
         }
+
+        
     }
 }
