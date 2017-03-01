@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Compilator
+namespace Compiler
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

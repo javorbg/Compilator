@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Compilator.Properties
+namespace Compiler.Properties
 {
 
 

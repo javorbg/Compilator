@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
-namespace Compilator
+namespace Compiler
 {
     public class MainWindowViewModel : BindableBase
     {
@@ -23,36 +24,15 @@ namespace Compilator
             ExiteCommand = new DelegateCommand(OnExiteCommand);
         }
 
-        private void OnExiteCommand()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnSaveAsFileCommand()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnSaveFileCommand()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnNewFileCommand()
-        {
-            throw new NotImplementedException();
-        }
+        public string SourceCodeText { get; set; }
 
         public DelegateCommand NewFileCommand { get; set; }
 
         public DelegateCommand SaveFileCommand { get; set; }
 
-
         public DelegateCommand SaveAsFileCommand { get; set; }
 
-
         public DelegateCommand ExiteCommand { get; set; }
-
 
         public DelegateCommand BuildCommand { get; set; }
 
@@ -81,6 +61,25 @@ namespace Compilator
         }
 
         private void OnBuildCommand()
+        {
+        }
+
+
+        private void OnExiteCommand()
+        {
+            Application.Current.Shutdown();   
+        }
+
+        private void OnSaveAsFileCommand()
+        {
+        }
+
+        private void OnSaveFileCommand()
+        {
+            
+        }
+
+        private void OnNewFileCommand()
         {
         }
     }
