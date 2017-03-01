@@ -17,13 +17,13 @@ namespace Compiler
         private SortedSet<int> BoolOprations;
         private SortedSet<int> AritmeticOprationLow;
         private SortedSet<int> AritmeticOprationHight;
-        private Compiler compiler;
+        private CompilerClass compiler;
         private SymbolTableItem buffer;
         private int PointToJump = -1;
         private int i;
         private string label = "_S";
 
-        public SemanticAnalysis(Compiler Lex)
+        public SemanticAnalysis(CompilerClass Lex)
         {
             BoolOprations = new SortedSet<int>();
             AritmeticOprationLow = new SortedSet<int>();

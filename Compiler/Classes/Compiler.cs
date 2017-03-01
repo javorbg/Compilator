@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Compiler
 {
-    public class Compiler
+    public class CompilerClass
     {
         private string Symbols = "{ } ( ) * / + - ; , == = <= >= < >";
         private char[] spaces = { ' ', '\n', '\r', '\t' };
@@ -16,7 +16,7 @@ namespace Compiler
         // 24 variable
         // 23 const
 
-        public Compiler()
+        public CompilerClass()
         {
             MainTable = new List<SymbolTableItem>();
             SortedTable = new SortedList<string, int>();
