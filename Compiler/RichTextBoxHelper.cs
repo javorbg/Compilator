@@ -16,6 +16,7 @@ namespace Compiler
     {
         private static HashSet<Thread> _recursionProtection = new HashSet<Thread>();
 
+        private static SyntaxHighlighter highlighter = new SyntaxHighlighter();
         public static FlowDocument GetDocumentXaml(DependencyObject obj)
         {
             return (FlowDocument)obj.GetValue(DocumentXamlProperty);
@@ -24,7 +25,9 @@ namespace Compiler
         public static void SetDocumentXaml(DependencyObject obj, FlowDocument value)
         {
             _recursionProtection.Add(Thread.CurrentThread);
+            highlighter.ColorKeyWords(value);
             obj.SetValue(DocumentXamlProperty, value);
+            
             _recursionProtection.Remove(Thread.CurrentThread);
         }
 

@@ -86,8 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\Dictionary.cs" />
-    <Compile Include="Classes\Syntaxis.cs" />
+    <Compile Include="Classes\SyntaxHighlighter.cs" />
     <Compile Include="RichTextBoxHelper.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
