@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace Compiler
 {
@@ -24,12 +25,9 @@ namespace Compiler
             SaveFileCommand = new DelegateCommand(OnSaveFileCommand);
             SaveAsFileCommand = new DelegateCommand(OnSaveAsFileCommand);
             ExiteCommand = new DelegateCommand(OnExiteCommand);
-            SourceCode = new FlowDocument();
-            SourceCode.LineHeight = 1d;
-
         }
 
-        public FlowDocument SourceCode { get; set; }
+        public string SourceCode { get; set; }
 
         public DelegateCommand NewFileCommand { get; set; }
 

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Javor" extensions=".jav" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="GotoKeywords" foreground="#FF2B91AF" exampleText="continue; return null;"/>
+  <!-- This is the main ruleset. -->
+  <RuleSet>
+    <Keywords color="GotoKeywords">
+      <Word>int</Word>
+      <Word>double</Word>
+      <Word>out</Word>
+      <Word>in</Word>
+      <Word>if</Word>
+      <Word>while</Word>
+      <Word>program</Word>
+      <Word>else</Word>
+    </Keywords>
+  </RuleSet>
+</SyntaxDefinition>

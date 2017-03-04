@@ -3,17 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:local="clr-namespace:Compiler"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
     <Window.Resources>
-        
+
     </Window.Resources>
 
-    <Grid > 
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition  Height="Auto"/>
@@ -34,9 +36,9 @@
             <Button />
             <Button Content="View Tables"/>
             <Button Content="Debug"/>
-
+            
         </ToolBar>
-        <RichTextBox x:Name="SourceCodeRTB" Grid.Row="2" local:RichTextBoxHelper.DocumentXaml="{Binding SourceCode}">
-        </RichTextBox>
+        <avalonEdit:TextEditor FontFamily="Consolas" 
+                                   SyntaxHighlighting="Javor" FontSize="10pt" Grid.Row="2"/>
     </Grid>
 </Window>
