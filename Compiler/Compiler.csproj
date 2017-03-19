@@ -99,6 +99,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Compiler.cs" />
+    <Compile Include="Classes\LexicalAnalysis.cs" />
+    <Compile Include="Classes\SyntaxAnalysis.cs" />
+    <Compile Include="Classes\Token.cs" />
     <Compile Include="Classes\SemanticAnalysis.cs" />
     <Compile Include="Classes\SymbolTable.cs" />
     <Compile Include="Classes\TrasnformForm.cs" />
@@ -126,7 +129,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Javor-Mode.xshd" />
+    <None Include="Javor-Mode.xshd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

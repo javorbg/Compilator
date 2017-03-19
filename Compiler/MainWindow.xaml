@@ -18,8 +18,9 @@
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition  Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" >
             <MenuItem Header="_File" >
@@ -31,14 +32,22 @@
             </MenuItem>
         </Menu>
         <ToolBar Grid.Row="1">
-            <Button Content="Build"/>
-            <Button Content="Font"/>
-            <Button />
-            <Button Content="View Tables"/>
-            <Button Content="Debug"/>
-            
+            <Button Content="Build"  Command="{Binding BuildCommand}"/>
+            <Button Content="Debug" Command="{Binding DebugCommand}"/>
         </ToolBar>
-        <avalonEdit:TextEditor FontFamily="Consolas" 
-                                   SyntaxHighlighting="Javor" FontSize="10pt" Grid.Row="2"/>
+        <avalonEdit:TextEditor Grid.Row="2" FontFamily="Consolas" SyntaxHighlighting="Javor" FontSize="12pt"
+                               VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+        <Grid Grid.Row="3" Visibility="Collapsed">
+            <TabControl >
+                <TabItem Header="Watch">
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>

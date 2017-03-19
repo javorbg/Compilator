@@ -27,6 +27,8 @@ namespace Compiler
             ExiteCommand = new DelegateCommand(OnExiteCommand);
         }
 
+        public bool DebugMode { get; set; }
+
         public string SourceCode { get; set; }
 
         public DelegateCommand NewFileCommand { get; set; }
@@ -86,6 +88,6 @@ namespace Compiler
         {
         }
 
-        
+
     }
 }
