@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:local="clr-namespace:Compiler"
-        
+        WindowState="Maximized"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Window.DataContext>
-        <local:MainWindowViewModel />
-    </Window.DataContext>
     <Window.Resources>
 
     </Window.Resources>
@@ -35,7 +34,7 @@
             <Button Content="Build"  Command="{Binding BuildCommand}"/>
             <Button Content="Debug" Command="{Binding DebugCommand}"/>
         </ToolBar>
-        <avalonEdit:TextEditor Grid.Row="2" FontFamily="Consolas" SyntaxHighlighting="Javor" FontSize="12pt"
+        <avalonEdit:TextEditor Margin="2,0" Grid.Row="2" FontFamily="Consolas" SyntaxHighlighting="Javor" FontSize="12pt"
                                VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
         <Grid Grid.Row="3" Visibility="Collapsed">
             <TabControl >
